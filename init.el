@@ -21,6 +21,9 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'after-init-hook
   (lambda () (load-theme 'cyberpunk t)))
