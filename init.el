@@ -8,9 +8,9 @@
   (package-refresh-contents))
 
 (defvar my-packages
-  '(aggressive-indent
-    company
-    cyberpunk-theme
+  '(company
+    distinguished-theme
+    solarized-theme
     paredit
     rainbow-delimiters))
 
@@ -24,11 +24,12 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+(show-paren-mode 1)
+
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'after-init-hook
-  (lambda () (load-theme 'cyberpunk t)))
+  (lambda () (load-theme 'solarized-dark t)))
 
-(add-hook 'scheme-mode-hook 'aggressive-indent-mode)
 (add-hook 'scheme-mode-hook 'paredit-mode)
 (add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
 
