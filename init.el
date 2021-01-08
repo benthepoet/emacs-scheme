@@ -9,9 +9,8 @@
 
 (defvar my-packages
   '(company
-    distinguished-theme
-    solarized-theme
-    paredit
+    subatomic-theme
+    parinfer
     rainbow-delimiters))
 
 (dolist (p my-packages)
@@ -28,9 +27,9 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'after-init-hook
-  (lambda () (load-theme 'solarized-dark t)))
+  (lambda () (load-theme 'subatomic t)))
 
-(add-hook 'scheme-mode-hook 'paredit-mode)
+(add-hook 'scheme-mode-hook 'parinfer-mode)
 (add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
 
 (keyboard-translate ?\C-t ?\C-x)
