@@ -10,7 +10,6 @@
 (defvar my-packages
   '(company
     subatomic-theme
-    parinfer-rust-mode
     rainbow-delimiters))
 
 (dolist (p my-packages)
@@ -29,7 +28,7 @@
 (add-hook 'after-init-hook
   (lambda () (load-theme 'subatomic t)))
 
-(add-hook 'scheme-mode-hook 'parinfer-rust-mode)
+(add-hook 'scheme-mode-hook 'parinfer-mode)
 (add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
 
 (keyboard-translate ?\C-t ?\C-x)
